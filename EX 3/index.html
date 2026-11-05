@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #efefef;
+        font-family: "Sono", sans-serif;
+      }
+
+      .pricing-container {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 22px;
+        flex-wrap: wrap;
+      }
+
+      .pricing-plan {
+        width: 260px;
+        background: #f5f5f5;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .plan-title {
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.05rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .pricing-plan:nth-child(1) .plan-title {
+        background: linear-gradient(135deg, #48d3d8, #3ec2d7);
+      }
+
+      .pricing-plan:nth-child(2) .plan-title {
+        background: linear-gradient(135deg, #2a9fe9, #3c71e4);
+      }
+
+      .pricing-plan:nth-child(3) .plan-title {
+        background: linear-gradient(135deg, #d587eb, #bb6de8);
+      }
+
+      .plan-price {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 28px 0 18px;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #383d42;
+      }
+
+      .plan-price::before {
+        content: "$";
+        font-size: 1.1rem;
+        margin-top: 10px;
+        margin-right: 6px;
+      }
+
+      .plan-price::after {
+        content: "USD / MONTH";
+        font-size: 0.62rem;
+        letter-spacing: 0.1em;
+        margin-left: 6px;
+        margin-top: 18px;
+        color: #5a606c;
+      }
+
+      .plan-features {
+        list-style: none;
+        padding: 0 18px;
+        margin: 0;
+      }
+
+      .plan-features li {
+        text-align: center;
+        padding: 10px 0;
+        font-size: 0.72rem;
+        color: #4a4e52;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .plan-features li:first-child {
+        border-top: none;
+      }
+
+      .plan-button {
+        display: block;
+        width: 80%;
+        margin: 18px auto 20px;
+        border: none;
+        border-radius: 999px;
+        padding: 12px 0;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+      }
+
+      .pricing-plan:nth-child(1) .plan-button {
+        background: linear-gradient(135deg, #4eced3, #46b9d1);
+      }
+
+      .pricing-plan:nth-child(2) .plan-button {
+        background: linear-gradient(135deg, #4db2f3, #4b7ae7);
+      }
+
+      .pricing-plan:nth-child(3) .plan-button {
+        background: linear-gradient(135deg, #d48ae7, #c06ce8);
+      }
+
+      @media (max-width: 760px) {
+        body {
+          align-items: flex-start;
+          padding: 30px 0;
+        }
+
+        .pricing-container {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title">FREE</div>
+        <div class="plan-price">0</div>
+        <ul class="plan-features">
+          <li>150 Products</li>
+          <li>5 Email Accounts</li>
+          <li>2 GB Bandwidth</li>
+          <li>500 GB Storage</li>
+        </ul>
+        <button class="plan-button">Select</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">BASIC</div>
+        <div class="plan-price">39</div>
+        <ul class="plan-features">
+          <li>1,500 Products</li>
+          <li>10 Email Accounts</li>
+          <li>6 GB Bandwidth</li>
+          <li>2 GB Storage</li>
+        </ul>
+        <button class="plan-button">Select</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">PREMIUM</div>
+        <div class="plan-price">129</div>
+        <ul class="plan-features">
+          <li>10,000 Products</li>
+          <li>20 Email Accounts</li>
+          <li>Unlimited Bandwidth</li>
+          <li>5 GB Storage</li>
+        </ul>
+        <button class="plan-button">Select</button>
+      </div>
+    </div>
+  </body>
+</html>
